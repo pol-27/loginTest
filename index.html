@@ -5,8 +5,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="lib.js"></script>
+  <script>
+    let status = getParam("status");
+    switch(status) {
+      case "1":
+        alert("아이디를 잘못 입력");
+        break;
+      case "2":
+        alert("비번를 잘못 입력");
+        break;
+      case "0":
+        alert("환영합니다.");
+        break;
+      default:
+    }
+  </script>
 </head>
 <body>
-  Hello
+  <form method="GET" action="login_ok.html">
+    <input type="text" name="userid">
+    <input type="text" name="userpwd">
+    <input type="submit" value="로그인">
+  </form>
 </body>
 </html>
